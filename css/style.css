@@ -1,0 +1,19 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Righteous&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none !important;
+    text-decoration: none !important;
+    border: none !important;
+}
+:root {
+    --bg-color: #f5e6d3;
+    --text: #3D3028;
+    --heading:  #241A15;
+    --heading-font: "Bree Serif", serif;
+    --body-font: "DM Sans", sans-serif;
+}
