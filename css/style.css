@@ -13,7 +13,7 @@
 :root {
     --bg-color: #f5e6d3;
     --dark: #313131;
-    --text: #3D3028;
+    --text: black;
     --heading:  #241A15;
     --heading-font: "Agbalumo", system-ui;
     --text-font: "Poppins", sans-serif;
@@ -26,8 +26,8 @@ body {
 }
 .logo h2 {
     font-family: var(--heading-font);
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
 header {
     position: fixed;
@@ -46,6 +46,9 @@ header nav {
     backdrop-filter: blur(9px);
     border-radius: 50px;
     margin: 0 auto;
+}
+header nav .menubtn {
+    display: none;
 }
 header nav .list {
     margin-top: 20px;
@@ -128,3 +131,52 @@ header nav .btn::before {
 }
 
 
+/* RESPONSIVENESS */
+
+@media (max-width: 830px) {
+    header nav .menubtn {
+        display: inline-block;
+        margin-left: -15%;
+        margin-right: -5%;
+    } 
+    header nav .menubtn i {
+        font-size: 25px;
+        font-weight: 800;
+        color: var(--text);
+    }
+    header nav .list {
+        display: none;
+        position: fixed;
+        top: -65%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        /* padding: 0 100%; */
+        background: #3333337e;
+        
+        backdrop-filter: blur(2px);
+        z-index: 1;
+    }
+    header nav .list ul {
+        width: 100%;
+        height: auto;
+        margin: 26% 0;
+        padding: 0;
+        text-align: center;
+    }
+    header nav .list ul li {
+        display: block;
+        padding: 10px;
+    }
+    header nav .list ul li a {
+        font-family: var(--heading-font);
+        color: #ffffff;
+        font-size: 50px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+    }
+    header nav .list.active {
+        display: block;
+    }
+}
