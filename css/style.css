@@ -135,11 +135,13 @@ header nav .btn::before {
 @media (max-width: 830px) {
     header nav .menubtn {
         display: inline-block;
-        margin-left: -15%;
+        margin-left: -13%;
         margin-right: -5%;
+        padding-bottom: 6px;
+        z-index: 2;
     } 
     header nav .menubtn i {
-        font-size: 25px;
+        font-size: 35px;
         font-weight: 800;
         color: var(--text);
     }
