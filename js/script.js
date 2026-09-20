@@ -13,3 +13,19 @@ var menubtn = document.querySelector('header nav .menubtn i'),
             menubtn.classList.add("bi-list");
         }
     });
+let lastScroll = 0;
+let header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+
+    let currentScroll = window.scrollY;
+
+    if (currentScroll > lastScroll + 10 && currentScroll > 100) {
+        header.classList.add('hide');
+
+    } else if (currentScroll < lastScroll - 10) {
+        header.classList.remove('hide');
+    }
+
+    lastScroll = currentScroll;
+});
