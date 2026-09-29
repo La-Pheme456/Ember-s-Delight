@@ -21,13 +21,9 @@
 body {
     background: var(--bg-color);
     color: var(--text);
+    font-family: var(--text-font);
     scroll-behavior: smooth;
     min-height: 200vh;
-}
-.logo h2 {
-    font-family: var(--heading-font);
-    font-weight: 400;
-    font-style: normal;
 }
 header {
     position: fixed;
@@ -51,6 +47,12 @@ header nav {
     backdrop-filter: blur(9px);
     border-radius: 50px;
     margin: 0 auto;
+}
+header nav .logo h2 {
+    font-family: var(--heading-font);
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
 }
 header nav .menubtn {
     display: none;
@@ -192,6 +194,52 @@ header nav .btn::before {
     font-family: var(--text-font);
     color: white;
 }
+#serv {
+    margin-top: 7%;
+}
+#serv .box {
+    width: 100%;
+    height: auto;
+    padding: 6px;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 20px;
+    background: #f5c07a;
+}
+#serv .col-md-3:nth-child(2) .box,
+#serv .col-md-3:nth-child(4) .box,
+#serv .col-md-3:nth-child(7) .box {
+    padding: 10% 0;
+}
+#serv .box .icn img {
+    width: 80px;
+    height: auto;
+    margin-bottom: -10px;
+}
+#serv .box .text h2 {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+#serv .box .text h2::after {
+    position: absolute;
+    content: '';
+    bottom: -39%;
+    left: 32%;
+    width: 90px;
+    height: 3px;
+    border-radius: 40px;
+    background: #fd8f00;
+}
+#serv .box .text p {
+    font-size: 16px;
+    margin-top: 10px;
+    text-transform: capitalize;
+    margin-bottom: -5px;
+}
+
+
 
 /* RESPONSIVENESS */
 
